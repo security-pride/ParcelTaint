@@ -1,0 +1,1047 @@
+{
+    "AppInfo": {
+        "AppName": "",
+        "PackageName": "",
+        "min_sdk": 34,
+        "target_sdk": 34,
+        "versionCode": 0,
+        "versionName": "",
+        "classCount": 13224,
+        "methodCount": 94411,
+        "appsharkTakeTime": 896833
+    },
+    "ManifestRisk": {
+    },
+    "SecurityInfo": {
+        "ParcelMismatch": {
+            "ParcelMismatch": {
+                "category": "ParcelMismatch",
+                "detail": "ParcelMismatch in System Server",
+                "model": "high",
+                "name": "ParcelMismatch",
+                "possibility": "2",
+                "vulners": [
+                    {
+                        "details": {
+                            "position": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: int startVoiceActivity(android.os.IBinder,android.content.Intent,java.lang.String,java.lang.String)>",
+                            "Sink": [
+                                "$i0_1 = interfaceinvoke $r9.<android.app.IActivityTaskManager: int startVoiceActivity(java.lang.String,java.lang.String,int,int,android.content.Intent,java.lang.String,android.service.voice.IVoiceInteractionSession,com.android.internal.app.IVoiceInteractor,int,android.app.ProfilerInfo,android.os.Bundle,int)>($r11, $r1, $i0, $i1, $r13, $r4, $r5, $r6, 0, null, null, $i2)"
+                            ],
+                            "entryMethod": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: int startVoiceActivity(android.os.IBinder,android.content.Intent,java.lang.String,java.lang.String)>",
+                            "Source": [
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: int startVoiceActivity(android.os.IBinder,android.content.Intent,java.lang.String,java.lang.String)>->@parameter1"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/2-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: int startVoiceActivity(android.os.IBinder,android.content.Intent,java.lang.String,java.lang.String)>->@parameter1",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: int startVoiceActivity(android.os.IBinder,android.content.Intent,java.lang.String,java.lang.String)>->$r4",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: int startVoiceActivityLocked(java.lang.String,int,int,android.os.IBinder,android.content.Intent,java.lang.String)>->@parameter4",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: int startVoiceActivityLocked(java.lang.String,int,int,android.os.IBinder,android.content.Intent,java.lang.String)>->$r3",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: int startVoiceActivityLocked(java.lang.String,int,int,android.os.IBinder,android.content.Intent,java.lang.String)>->$r13"
+                            ]
+                        },
+                        "hash": "ab2b5de844ecc31de7b603d16a5b54b3556cdec0",
+                        "old_hash": "5276c97f6c4a61e9d23f89c8d5b888d2bffa014b",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.appwidget.AppWidgetServiceImpl: boolean bindRemoteViewsService(java.lang.String,int,android.content.Intent,android.app.IApplicationThread,android.os.IBinder,android.app.IServiceConnection,long)>",
+                            "Sink": [
+                                "$i2_4 = interfaceinvoke $r15.<android.app.IActivityManager: int bindService(android.app.IApplicationThread,android.os.IBinder,android.content.Intent,java.lang.String,android.app.IServiceConnection,long,java.lang.String,int)>($r3, $r4, $r2, $r1_2, $r5, $l1_1, $r13_1, $i2_3)"
+                            ],
+                            "entryMethod": "<com.android.server.appwidget.AppWidgetServiceImpl: boolean bindRemoteViewsService(java.lang.String,int,android.content.Intent,android.app.IApplicationThread,android.os.IBinder,android.app.IServiceConnection,long)>",
+                            "Source": [
+                                "<com.android.server.appwidget.AppWidgetServiceImpl: boolean bindRemoteViewsService(java.lang.String,int,android.content.Intent,android.app.IApplicationThread,android.os.IBinder,android.app.IServiceConnection,long)>->@parameter2"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/1-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.appwidget.AppWidgetServiceImpl: boolean bindRemoteViewsService(java.lang.String,int,android.content.Intent,android.app.IApplicationThread,android.os.IBinder,android.app.IServiceConnection,long)>->@parameter2",
+                                "<com.android.server.appwidget.AppWidgetServiceImpl: boolean bindRemoteViewsService(java.lang.String,int,android.content.Intent,android.app.IApplicationThread,android.os.IBinder,android.app.IServiceConnection,long)>->$r2"
+                            ]
+                        },
+                        "hash": "3c3a5958a8c5652a69a91d0b18c0a7215f1f2f84",
+                        "old_hash": "77de86ec38061de1bd7b82c96b706196834b3b12",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionForActiveService(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>",
+                            "Sink": [
+                                "interfaceinvoke $r20.<android.service.voice.IVoiceInteractionSession: void show(android.os.Bundle,int,com.android.internal.app.IVoiceInteractionSessionShowCallback)>($r1_1, $i0_11, $r3)"
+                            ],
+                            "entryMethod": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionForActiveService(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>",
+                            "Source": [
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionForActiveService(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->@parameter0"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/5-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionForActiveService(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->@parameter0",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionForActiveService(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->$r5",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->@parameter0",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->$r1",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->$r1_2",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->@parameter0",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->$r1",
+                                "pf{obj{<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>:23=>com.android.server.voiceinteraction.VoiceInteractionSessionConnection}(android.os.Bundle)->mShowArgs}",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->$r1_1"
+                            ]
+                        },
+                        "hash": "41674ce12109841aa24d2bc67c4fe82364a8bfa6",
+                        "old_hash": "34c2c5f230f636d2e10e3329bf3668818213520f",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>",
+                            "Sink": [
+                                "interfaceinvoke $r10_2.<android.content.ISyncAdapter: void startSync(android.content.ISyncContext,java.lang.String,android.accounts.Account,android.os.Bundle)>($r15, $r9_5, $r8_2, $r11)"
+                            ],
+                            "entryMethod": "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>",
+                            "Source": [
+                                "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>->@parameter0"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/14-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>->@parameter0",
+                                "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>->$r1",
+                                "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>->$r4_1",
+                                "<com.android.server.content.SyncStorageEngine$EndPoint: void <init>(android.accounts.Account,java.lang.String,int)>->@parameter0",
+                                "<com.android.server.content.SyncStorageEngine$EndPoint: void <init>(android.accounts.Account,java.lang.String,int)>->$r1",
+                                "pf{obj{<com.android.server.content.SyncStorageEngine: int getIsSyncable(android.accounts.Account,int,java.lang.String)>:8=>com.android.server.content.SyncStorageEngine$EndPoint}(unknown)->@data}",
+                                "<com.android.server.content.SyncManager: void postMonitorSyncProgressMessage(com.android.server.content.SyncManager$ActiveSyncContext)>->$r3",
+                                "pf{obj{<CustomClass: void Main_Entry_CustomClass()>:300=>com.android.server.content.SyncOperation}(unknown)->@data}",
+                                "<com.android.server.content.SyncOperation: android.os.Bundle getClonedExtras()>->r2",
+                                "<com.android.server.content.SyncOperation: android.os.Bundle getClonedExtras()>->$r0",
+                                "<com.android.server.content.SyncManager$SyncHandler: void runBoundToAdapterH(com.android.server.content.SyncManager$ActiveSyncContext,android.os.IBinder)>->$r11"
+                            ]
+                        },
+                        "hash": "f8a9dcf3a664b863b6354e0795f7010d02358e27",
+                        "old_hash": "6b74d2af3ccc1e62d68f350f9da9d3268b8acada",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.am.ActivityManagerService: int broadcastIntentWithFeature(android.app.IApplicationThread,java.lang.String,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>",
+                            "Sink": [
+                                "interfaceinvoke $r6_2.<android.app.IApplicationThread: void scheduleRegisteredReceiver(android.content.IIntentReceiver,android.content.Intent,int,java.lang.String,android.os.Bundle,boolean,boolean,boolean,int,int,int,java.lang.String)>($r2, $r3, 0, null, null, 0, 0, 1, $i0, $i2, $i1_3, $r5_4)"
+                            ],
+                            "entryMethod": "<com.android.server.am.ActivityManagerService: int broadcastIntent(android.app.IApplicationThread,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>",
+                            "Source": [
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentWithFeature(android.app.IApplicationThread,java.lang.String,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->@parameter2"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/21-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentWithFeature(android.app.IApplicationThread,java.lang.String,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->@parameter2",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentWithFeature(android.app.IApplicationThread,java.lang.String,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->$r3",
+                                "<com.android.server.am.ActivityManagerService: android.content.Intent verifyBroadcastLocked(android.content.Intent)>->@parameter0",
+                                "<com.android.server.am.ActivityManagerService: android.content.Intent verifyBroadcastLocked(android.content.Intent)>->$r1",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentWithFeature(android.app.IApplicationThread,java.lang.String,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->$r3_1",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLocked(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->@parameter3",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLocked(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->$r4",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLockedTraced(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.app.BroadcastOptions,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->@parameter3",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLockedTraced(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.app.BroadcastOptions,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->$r16",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLockedTraced(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.app.BroadcastOptions,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->$r69",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLockedTraced(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.app.BroadcastOptions,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->$r25",
+                                "<com.android.server.am.ActivityManagerService: void scheduleCanceledResultTo(com.android.server.am.ProcessRecord,android.content.IIntentReceiver,android.content.Intent,int,android.app.BroadcastOptions,int,java.lang.String)>->@parameter2",
+                                "<com.android.server.am.ActivityManagerService: void scheduleCanceledResultTo(com.android.server.am.ProcessRecord,android.content.IIntentReceiver,android.content.Intent,int,android.app.BroadcastOptions,int,java.lang.String)>->$r3"
+                            ]
+                        },
+                        "hash": "81fac51f0c02825c148d2a0a1e506bfc8c3d0d2e",
+                        "old_hash": "78668b97743867a81306377a129f0b36ae5b0f2d",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void showSession(android.os.Bundle,int,java.lang.String)>",
+                            "Sink": [
+                                "interfaceinvoke $r20.<android.service.voice.IVoiceInteractionSession: void show(android.os.Bundle,int,com.android.internal.app.IVoiceInteractionSessionShowCallback)>($r1_1, $i0_11, $r3)"
+                            ],
+                            "entryMethod": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void showSession(android.os.Bundle,int,java.lang.String)>",
+                            "Source": [
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void showSession(android.os.Bundle,int,java.lang.String)>->@parameter0"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/4-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void showSession(android.os.Bundle,int,java.lang.String)>->@parameter0",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void showSession(android.os.Bundle,int,java.lang.String)>->$r3",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->@parameter0",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->$r1",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->$r1_2",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->@parameter0",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->$r1",
+                                "pf{obj{<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>:23=>com.android.server.voiceinteraction.VoiceInteractionSessionConnection}(android.os.Bundle)->mShowArgs}",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->$r1_1"
+                            ]
+                        },
+                        "hash": "768437503cdd0fa2e3ec7c756d644ab795383d91",
+                        "old_hash": "169164a003bcb85153ad58922e30757700741612",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.content.ContentService: void sync(android.content.SyncRequest,java.lang.String)>",
+                            "Sink": [
+                                "interfaceinvoke $r10_2.<android.content.ISyncAdapter: void startSync(android.content.ISyncContext,java.lang.String,android.accounts.Account,android.os.Bundle)>($r15, $r9_5, $r8_2, $r11)"
+                            ],
+                            "entryMethod": "<com.android.server.content.ContentService: void sync(android.content.SyncRequest,java.lang.String)>",
+                            "Source": [
+                                "<com.android.server.content.ContentService: void sync(android.content.SyncRequest,java.lang.String)>->@parameter0"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/11-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.content.ContentService: void sync(android.content.SyncRequest,java.lang.String)>->@parameter0",
+                                "<com.android.server.content.ContentService: void sync(android.content.SyncRequest,java.lang.String)>->$r1",
+                                "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>->@parameter0",
+                                "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>->$r1",
+                                "<com.android.server.content.ContentService: void syncAsUser(android.content.SyncRequest,int,java.lang.String)>->$r4_1",
+                                "<com.android.server.content.SyncStorageEngine$EndPoint: void <init>(android.accounts.Account,java.lang.String,int)>->@parameter0",
+                                "<com.android.server.content.SyncStorageEngine$EndPoint: void <init>(android.accounts.Account,java.lang.String,int)>->$r1",
+                                "pf{obj{<com.android.server.content.SyncStorageEngine: int getIsSyncable(android.accounts.Account,int,java.lang.String)>:8=>com.android.server.content.SyncStorageEngine$EndPoint}(unknown)->@data}",
+                                "<com.android.server.content.SyncManager: void postMonitorSyncProgressMessage(com.android.server.content.SyncManager$ActiveSyncContext)>->$r3",
+                                "pf{obj{<CustomClass: void Main_Entry_CustomClass()>:294=>com.android.server.content.SyncOperation}(unknown)->@data}",
+                                "<com.android.server.content.SyncOperation: android.os.Bundle getClonedExtras()>->r2",
+                                "<com.android.server.content.SyncOperation: android.os.Bundle getClonedExtras()>->$r0",
+                                "<com.android.server.content.SyncManager$SyncHandler: void runBoundToAdapterH(com.android.server.content.SyncManager$ActiveSyncContext,android.os.IBinder)>->$r11"
+                            ]
+                        },
+                        "hash": "2e45c5ffd5c96b530577ad7ef283ee2660ebea83",
+                        "old_hash": "f8d6d58deaef7108f59400a92659a2ea6d124d67",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean bindDeviceAdminServiceAsUser(android.content.ComponentName,android.app.IApplicationThread,android.os.IBinder,android.content.Intent,android.app.IServiceConnection,long,int)>",
+                            "Sink": [
+                                "$i1_2 = interfaceinvoke $r16.<android.app.IActivityManager: int bindService(android.app.IApplicationThread,android.os.IBinder,android.content.Intent,java.lang.String,android.app.IServiceConnection,long,java.lang.String,int)>($r2, $r3, $r4, $r9_6, $r5, $l0, $r19, $i1)"
+                            ],
+                            "entryMethod": "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean bindDeviceAdminServiceAsUser(android.content.ComponentName,android.app.IApplicationThread,android.os.IBinder,android.content.Intent,android.app.IServiceConnection,long,int)>",
+                            "Source": [
+                                "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean bindDeviceAdminServiceAsUser(android.content.ComponentName,android.app.IApplicationThread,android.os.IBinder,android.content.Intent,android.app.IServiceConnection,long,int)>->@parameter3"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/6-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean bindDeviceAdminServiceAsUser(android.content.ComponentName,android.app.IApplicationThread,android.os.IBinder,android.content.Intent,android.app.IServiceConnection,long,int)>->@parameter3",
+                                "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean bindDeviceAdminServiceAsUser(android.content.ComponentName,android.app.IApplicationThread,android.os.IBinder,android.content.Intent,android.app.IServiceConnection,long,int)>->$r4"
+                            ]
+                        },
+                        "hash": "45d94032ae03acb3b187e136d59d78a1c6d24da5",
+                        "old_hash": "18e6571602f55b294a59d1f57ccfbb72b14c43fb",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.textservices.TextServicesManagerService: void getSpellCheckerService(int,java.lang.String,java.lang.String,com.android.internal.textservice.ITextServicesSessionListener,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int)>",
+                            "Sink": [
+                                "interfaceinvoke $r7.<com.android.internal.textservice.ISpellCheckerService: void getISpellCheckerSession(java.lang.String,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int,com.android.internal.textservice.ISpellCheckerServiceCallback)>($r8, $r1_1, $r2, $i0, $r11)"
+                            ],
+                            "entryMethod": "<com.android.server.textservices.TextServicesManagerService: void getSpellCheckerService(int,java.lang.String,java.lang.String,com.android.internal.textservice.ITextServicesSessionListener,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int)>",
+                            "Source": [
+                                "<com.android.server.textservices.TextServicesManagerService: void getSpellCheckerService(int,java.lang.String,java.lang.String,com.android.internal.textservice.ITextServicesSessionListener,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int)>->@parameter5"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/0-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.textservices.TextServicesManagerService: void getSpellCheckerService(int,java.lang.String,java.lang.String,com.android.internal.textservice.ITextServicesSessionListener,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int)>->@parameter5",
+                                "<com.android.server.textservices.TextServicesManagerService: void getSpellCheckerService(int,java.lang.String,java.lang.String,com.android.internal.textservice.ITextServicesSessionListener,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int)>->$r5",
+                                "<com.android.server.textservices.TextServicesManagerService$SessionRequest: void <init>(int,java.lang.String,com.android.internal.textservice.ITextServicesSessionListener,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int)>->@parameter4",
+                                "<com.android.server.textservices.TextServicesManagerService$SessionRequest: void <init>(int,java.lang.String,com.android.internal.textservice.ITextServicesSessionListener,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int)>->$r4",
+                                "pf{obj{<com.android.server.textservices.TextServicesManagerService: void getSpellCheckerService(int,java.lang.String,java.lang.String,com.android.internal.textservice.ITextServicesSessionListener,com.android.internal.textservice.ISpellCheckerSessionListener,android.os.Bundle,int)>:48=>com.android.server.textservices.TextServicesManagerService$SessionRequest}(android.os.Bundle)->mBundle}",
+                                "<com.android.server.textservices.TextServicesManagerService$SpellCheckerBindGroup: void getISpellCheckerSessionOrQueueLocked(com.android.server.textservices.TextServicesManagerService$SessionRequest)>->$r2"
+                            ]
+                        },
+                        "hash": "7d8cf8bcef420c1df133467424a884b1f5fcc134",
+                        "old_hash": "57c928d1f97f8b398336183ea194e8dcf991252e",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.content.ContentService: void cancelRequest(android.content.SyncRequest)>",
+                            "Sink": [
+                                "interfaceinvoke $r10_2.<android.content.ISyncAdapter: void startSync(android.content.ISyncContext,java.lang.String,android.accounts.Account,android.os.Bundle)>($r15, $r9_5, $r8_2, $r11)"
+                            ],
+                            "entryMethod": "<com.android.server.content.ContentService: void cancelRequest(android.content.SyncRequest)>",
+                            "Source": [
+                                "<com.android.server.content.ContentService: void cancelRequest(android.content.SyncRequest)>->@parameter0"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/15-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.content.ContentService: void cancelRequest(android.content.SyncRequest)>->@parameter0",
+                                "<com.android.server.content.ContentService: void cancelRequest(android.content.SyncRequest)>->$r2",
+                                "<com.android.server.content.ContentService: void cancelRequest(android.content.SyncRequest)>->$r5",
+                                "pf{obj{<com.android.server.content.ContentService: void cancelRequest(android.content.SyncRequest)>:8=>android.os.Bundle}(unknown)->@data}",
+                                "<com.android.server.content.SyncManager: void postMonitorSyncProgressMessage(com.android.server.content.SyncManager$ActiveSyncContext)>->$r3",
+                                "pf{obj{<CustomClass: void Main_Entry_CustomClass()>:299=>com.android.server.content.SyncOperation}(unknown)->@data}",
+                                "<com.android.server.content.SyncOperation: android.os.Bundle getClonedExtras()>->r2",
+                                "<com.android.server.content.SyncOperation: android.os.Bundle getClonedExtras()>->$r0",
+                                "<com.android.server.content.SyncManager$SyncHandler: void runBoundToAdapterH(com.android.server.content.SyncManager$ActiveSyncContext,android.os.IBinder)>->$r11"
+                            ]
+                        },
+                        "hash": "ea3d354d4c84ed544b3a8682e05fe9ea58356369",
+                        "old_hash": "a4e925df937d3f1aee7a2b778c2f0710392efaf8",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.am.ActivityManagerService: boolean startInstrumentation(android.content.ComponentName,java.lang.String,int,android.os.Bundle,android.app.IInstrumentationWatcher,android.app.IUiAutomationConnection,int,java.lang.String)>",
+                            "Sink": [
+                                "interfaceinvoke $r9.<android.app.IApplicationThread: void instrumentWithoutRestart(android.content.ComponentName,android.os.Bundle,android.app.IInstrumentationWatcher,android.app.IUiAutomationConnection,android.content.pm.ApplicationInfo)>($r0, $r1, $r2, $r3, $r6)"
+                            ],
+                            "entryMethod": "<com.android.server.am.ActivityManagerService: boolean startInstrumentation(android.content.ComponentName,java.lang.String,int,android.os.Bundle,android.app.IInstrumentationWatcher,android.app.IUiAutomationConnection,int,java.lang.String)>",
+                            "Source": [
+                                "<com.android.server.am.ActivityManagerService: boolean startInstrumentation(android.content.ComponentName,java.lang.String,int,android.os.Bundle,android.app.IInstrumentationWatcher,android.app.IUiAutomationConnection,int,java.lang.String)>->@parameter3"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/19-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.am.ActivityManagerService: boolean startInstrumentation(android.content.ComponentName,java.lang.String,int,android.os.Bundle,android.app.IInstrumentationWatcher,android.app.IUiAutomationConnection,int,java.lang.String)>->@parameter3",
+                                "<com.android.server.am.ActivityManagerService: boolean startInstrumentation(android.content.ComponentName,java.lang.String,int,android.os.Bundle,android.app.IInstrumentationWatcher,android.app.IUiAutomationConnection,int,java.lang.String)>->$r2",
+                                "pf{obj{<com.android.server.am.ActivityManagerService: boolean startInstrumentation(android.content.ComponentName,java.lang.String,int,android.os.Bundle,android.app.IInstrumentationWatcher,android.app.IUiAutomationConnection,int,java.lang.String)>:192=>com.android.server.am.ActiveInstrumentation}(android.os.Bundle)->mArguments}",
+                                "<com.android.server.am.ActivityManagerService: void instrumentWithoutRestart(com.android.server.am.ActiveInstrumentation,android.content.pm.ApplicationInfo)>->$r1"
+                            ]
+                        },
+                        "hash": "98222cbc09db126417e7def94939ef557ba7c909",
+                        "old_hash": "bc14c2f85cf47bd1fba917c9fadf882879e2c330",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.notification.NotificationManagerService$11: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int)>",
+                            "Sink": [
+                                "interfaceinvoke $r11.<android.service.notification.INotificationListener: void onNotificationEnqueuedWithChannel(android.service.notification.IStatusBarNotificationHolder,android.app.NotificationChannel,android.service.notification.NotificationRankingUpdate)>($r19, $r14, $r13)"
+                            ],
+                            "entryMethod": "<com.android.server.notification.NotificationManagerService$11: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int)>",
+                            "Source": [
+                                "<com.android.server.notification.NotificationManagerService$11: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int)>->@parameter4"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/7-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.notification.NotificationManagerService$11: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int)>->@parameter4",
+                                "<com.android.server.notification.NotificationManagerService$11: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int)>->$r4",
+                                "<com.android.server.notification.NotificationManagerService: void enqueueNotificationInternal(java.lang.String,java.lang.String,int,int,java.lang.String,int,android.app.Notification,int,boolean)>->@parameter6",
+                                "<com.android.server.notification.NotificationManagerService: void enqueueNotificationInternal(java.lang.String,java.lang.String,int,int,java.lang.String,int,android.app.Notification,int,boolean)>->$r4",
+                                "<com.android.server.notification.NotificationManagerService: void enqueueNotificationInternal(java.lang.String,java.lang.String,int,int,java.lang.String,int,android.app.Notification,int,boolean,boolean)>->@parameter6",
+                                "<com.android.server.notification.NotificationManagerService: void enqueueNotificationInternal(java.lang.String,java.lang.String,int,int,java.lang.String,int,android.app.Notification,int,boolean,boolean)>->$r4",
+                                "<com.android.server.notification.NotificationManagerService: boolean enqueueNotificationInternal(java.lang.String,java.lang.String,int,int,java.lang.String,int,android.app.Notification,int,boolean,com.android.server.notification.NotificationManagerService$PostNotificationTracker,boolean)>->@parameter6",
+                                "<com.android.server.notification.NotificationManagerService: boolean enqueueNotificationInternal(java.lang.String,java.lang.String,int,int,java.lang.String,int,android.app.Notification,int,boolean,com.android.server.notification.NotificationManagerService$PostNotificationTracker,boolean)>->$r1",
+                                "pf{obj{<com.android.server.notification.NotificationManagerService: boolean enqueueNotificationInternal(java.lang.String,java.lang.String,int,int,java.lang.String,int,android.app.Notification,int,boolean,com.android.server.notification.NotificationManagerService$PostNotificationTracker,boolean)>:50=>android.service.notification.StatusBarNotification}(unknown)->@data}",
+                                "<com.android.server.notification.GroupHelper: void maybeGroup(android.service.notification.StatusBarNotification,boolean)>->$r7",
+                                "<com.android.server.notification.GroupHelper: void maybeGroup(android.service.notification.StatusBarNotification,boolean)>->$r5_1",
+                                "pf{obj{<com.android.server.notification.NotificationManagerService$PostNotificationRunnable: boolean postNotification()>:23=>java.lang.Object}(unknown)->@data}",
+                                "<com.android.server.notification.NotificationRecord: android.app.NotificationChannel getChannel()>->r1",
+                                "<com.android.server.notification.NotificationManagerService$NotificationAssistants: void onNotificationEnqueuedLocked(com.android.server.notification.NotificationRecord)>->$r14"
+                            ]
+                        },
+                        "hash": "8eb4e0fc77a9bb64874b3441a7f6adcf36a80ee9",
+                        "old_hash": "80c369dba929507153ffda4e824f1560108f5070",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.am.ActivityManagerService: int broadcastIntent(android.app.IApplicationThread,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>",
+                            "Sink": [
+                                "interfaceinvoke $r6_2.<android.app.IApplicationThread: void scheduleRegisteredReceiver(android.content.IIntentReceiver,android.content.Intent,int,java.lang.String,android.os.Bundle,boolean,boolean,boolean,int,int,int,java.lang.String)>($r2, $r3, 0, null, null, 0, 0, 1, $i0, $i2, $i1_3, $r5_4)"
+                            ],
+                            "entryMethod": "<com.android.server.am.ActivityManagerService: int broadcastIntent(android.app.IApplicationThread,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>",
+                            "Source": [
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntent(android.app.IApplicationThread,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->@parameter1"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/22-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntent(android.app.IApplicationThread,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->@parameter1",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntent(android.app.IApplicationThread,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->$r2",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentWithFeature(android.app.IApplicationThread,java.lang.String,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->@parameter2",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentWithFeature(android.app.IApplicationThread,java.lang.String,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->$r3",
+                                "<com.android.server.am.ActivityManagerService: android.content.Intent verifyBroadcastLocked(android.content.Intent)>->@parameter0",
+                                "<com.android.server.am.ActivityManagerService: android.content.Intent verifyBroadcastLocked(android.content.Intent)>->$r1",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentWithFeature(android.app.IApplicationThread,java.lang.String,android.content.Intent,java.lang.String,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int)>->$r3_1",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLocked(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->@parameter3",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLocked(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.os.Bundle,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->$r4",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLockedTraced(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.app.BroadcastOptions,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->@parameter3",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLockedTraced(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.app.BroadcastOptions,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->$r16",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLockedTraced(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.app.BroadcastOptions,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->$r69",
+                                "<com.android.server.am.ActivityManagerService: int broadcastIntentLockedTraced(com.android.server.am.ProcessRecord,java.lang.String,java.lang.String,android.content.Intent,java.lang.String,com.android.server.am.ProcessRecord,android.content.IIntentReceiver,int,java.lang.String,android.os.Bundle,java.lang.String[],java.lang.String[],java.lang.String[],int,android.app.BroadcastOptions,boolean,boolean,int,int,int,int,int,android.app.BackgroundStartPrivileges,int[],java.util.function.BiFunction)>->$r25",
+                                "<com.android.server.am.ActivityManagerService: void scheduleCanceledResultTo(com.android.server.am.ProcessRecord,android.content.IIntentReceiver,android.content.Intent,int,android.app.BroadcastOptions,int,java.lang.String)>->@parameter2",
+                                "<com.android.server.am.ActivityManagerService: void scheduleCanceledResultTo(com.android.server.am.ProcessRecord,android.content.IIntentReceiver,android.content.Intent,int,android.app.BroadcastOptions,int,java.lang.String)>->$r3"
+                            ]
+                        },
+                        "hash": "3f2d68bb8d633d6ef8679fd74ac90b46823aa8d4",
+                        "old_hash": "bb5904b553e0d83f65abd9dbe33dd891187b8798",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int,java.lang.String)>",
+                            "Sink": [
+                                "interfaceinvoke $r20.<android.service.voice.IVoiceInteractionSession: void show(android.os.Bundle,int,com.android.internal.app.IVoiceInteractionSessionShowCallback)>($r1_1, $i0_11, $r3)"
+                            ],
+                            "entryMethod": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int,java.lang.String)>",
+                            "Source": [
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int,java.lang.String)>->@parameter1"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/3-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int,java.lang.String)>->@parameter1",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int,java.lang.String)>->$r4",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->@parameter0",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->$r1",
+                                "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>->$r1_2",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->@parameter0",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->$r1",
+                                "pf{obj{<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: boolean showSessionLocked(android.os.Bundle,int,java.lang.String,com.android.internal.app.IVoiceInteractionSessionShowCallback,android.os.IBinder)>:23=>com.android.server.voiceinteraction.VoiceInteractionSessionConnection}(android.os.Bundle)->mShowArgs}",
+                                "<com.android.server.voiceinteraction.VoiceInteractionSessionConnection: boolean showLocked(android.os.Bundle,int,java.lang.String,int,com.android.internal.app.IVoiceInteractionSessionShowCallback,java.util.List)>->$r1_1"
+                            ]
+                        },
+                        "hash": "20163d4dba39e18905fab7cb713ef1d3001045f4",
+                        "old_hash": "1364904286237862bc9aa3472eefa319cc17c69a",
+                        "possibility": "2"
+                    },
+                    {
+                        "details": {
+                            "position": "<com.android.server.content.ContentService: void requestSync(android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String)>",
+                            "Sink": [
+                                "interfaceinvoke $r10_2.<android.content.ISyncAdapter: void startSync(android.content.ISyncContext,java.lang.String,android.accounts.Account,android.os.Bundle)>($r15, $r9_5, $r8_2, $r11)"
+                            ],
+                            "entryMethod": "<com.android.server.content.ContentService: void requestSync(android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String)>",
+                            "Source": [
+                                "<com.android.server.content.ContentService: void requestSync(android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String)>->@parameter2"
+                            ],
+                            "url": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/13-ParcelMismatch.html",
+                            "target": [
+                                "<com.android.server.content.ContentService: void requestSync(android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String)>->@parameter2",
+                                "<com.android.server.content.ContentService: void requestSync(android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String)>->$r3",
+                                "<com.android.server.content.SyncManager: void scheduleSync(android.accounts.Account,int,int,java.lang.String,android.os.Bundle,int,int,int,int,java.lang.String)>->@parameter4",
+                                "<com.android.server.content.SyncManager: void scheduleSync(android.accounts.Account,int,int,java.lang.String,android.os.Bundle,int,int,int,int,java.lang.String)>->$r3",
+                                "<com.android.server.content.SyncManager: void scheduleSync(android.accounts.Account,int,int,java.lang.String,android.os.Bundle,int,long,boolean,int,int,int,java.lang.String)>->@parameter4",
+                                "<com.android.server.content.SyncManager: void scheduleSync(android.accounts.Account,int,int,java.lang.String,android.os.Bundle,int,long,boolean,int,int,int,java.lang.String)>->$r4",
+                                "<com.android.server.content.SyncManager: void scheduleSync(android.accounts.Account,int,int,java.lang.String,android.os.Bundle,int,long,boolean,int,int,int,java.lang.String)>->$r4_2",
+                                "pf{obj{<com.android.server.content.SyncManager: void scheduleSync(android.accounts.Account,int,int,java.lang.String,android.os.Bundle,int,long,boolean,int,int,int,java.lang.String)>:24=>java.lang.Integer}(unknown)->@data}",
+                                "<com.android.server.content.SyncManager: void postMonitorSyncProgressMessage(com.android.server.content.SyncManager$ActiveSyncContext)>->$r3",
+                                "pf{obj{<CustomClass: void Main_Entry_CustomClass()>:300=>com.android.server.content.SyncOperation}(unknown)->@data}",
+                                "<com.android.server.content.SyncOperation: android.os.Bundle getClonedExtras()>->r2",
+                                "<com.android.server.content.SyncOperation: android.os.Bundle getClonedExtras()>->$r0",
+                                "<com.android.server.content.SyncManager$SyncHandler: void runBoundToAdapterH(com.android.server.content.SyncManager$ActiveSyncContext,android.os.IBinder)>->$r11"
+                            ]
+                        },
+                        "hash": "7f92cc4357933a1b1e3bb9c82efd1717485c6f2c",
+                        "old_hash": "c54ef7c2c9a2d24fc8d434a1e30ab83d33ef01f8",
+                        "possibility": "2"
+                    }
+                ],
+                "wiki": "",
+                "deobfApk": ""
+            }
+        }
+    },
+    "DeepLinkInfo": {
+    },
+    "HTTP_API": [
+    ],
+    "JsBridgeInfo": [
+    ],
+    "BasicInfo": {
+        "ComponentsInfo": {
+            "exportedReceivers": {
+                "com.android.server.app.GameServiceController$PackageChangedBroadcastReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.app.GameServiceController$PackageChangedBroadcastReceiver",
+                    "RegisteredMethod": "<com.android.server.app.GameServiceController: void evaluateGameServiceProviderPackageChangedListenerLocked(java.lang.String)>",
+                    "RegisteredStmt": "virtualinvoke $r4_2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r6, $r5)"
+                },
+                "com.android.server.companion.presence.BleCompanionDeviceScanner$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.companion.presence.BleCompanionDeviceScanner$1",
+                    "RegisteredMethod": "<com.android.server.companion.presence.BleCompanionDeviceScanner: void registerBluetoothStateBroadcastReceiver(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r1, r3)"
+                },
+                "com.android.server.biometrics.sensors.fingerprint.hidl.LockoutFrameworkImpl$LockoutReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.biometrics.sensors.fingerprint.hidl.LockoutFrameworkImpl$LockoutReceiver",
+                    "RegisteredMethod": "<com.android.server.biometrics.sensors.fingerprint.hidl.LockoutFrameworkImpl: void <init>(android.content.Context,com.android.server.biometrics.sensors.fingerprint.hidl.LockoutFrameworkImpl$LockoutResetCallback)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)>($r1, $r2, \"android.permission.RESET_FINGERPRINT_LOCKOUT\", null, 2)"
+                },
+                "com.android.server.EntropyMixer$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.EntropyMixer$2",
+                    "RegisteredMethod": "<com.android.server.EntropyMixer: void <init>(android.content.Context,java.io.File,java.io.File,java.io.File)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r9, r11, null, $r3)"
+                },
+                "com.android.server.connectivity.PacProxyService$PacRefreshIntentReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.connectivity.PacProxyService$PacRefreshIntentReceiver",
+                    "RegisteredMethod": "<com.android.server.connectivity.PacProxyService: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r11, $r12)"
+                },
+                "com.android.server.apphibernation.AppHibernationService$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.apphibernation.AppHibernationService$1",
+                    "RegisteredMethod": "<com.android.server.apphibernation.AppHibernationService: void <init>(com.android.server.apphibernation.AppHibernationService$Injector)>",
+                    "RegisteredStmt": "virtualinvoke $r2_2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r17, $r19)"
+                },
+                "com.android.server.alarm.AlarmManagerService$ChargingReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.alarm.AlarmManagerService$ChargingReceiver",
+                    "RegisteredMethod": "<com.android.server.alarm.AlarmManagerService$ChargingReceiver: void <init>(com.android.server.alarm.AlarmManagerService)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r1)"
+                },
+                "com.android.server.job.controllers.StorageController$StorageTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.job.controllers.StorageController$StorageTracker",
+                    "RegisteredMethod": "<com.android.server.job.controllers.StorageController$StorageTracker: void startTracking()>",
+                    "RegisteredStmt": "virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r1)"
+                },
+                "com.android.server.job.JobSchedulerService$BatteryStateTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.job.JobSchedulerService$BatteryStateTracker",
+                    "RegisteredMethod": "<com.android.server.job.JobSchedulerService$BatteryStateTracker: void startTracking()>",
+                    "RegisteredStmt": "virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r1)"
+                },
+                "com.android.server.alarm.AlarmManagerService$InteractiveStateReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.alarm.AlarmManagerService$InteractiveStateReceiver",
+                    "RegisteredMethod": "<com.android.server.alarm.AlarmManagerService$InteractiveStateReceiver: void <init>(com.android.server.alarm.AlarmManagerService)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r1)"
+                },
+                "com.android.server.am.DataConnectionStats": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.am.DataConnectionStats",
+                    "RegisteredMethod": "<com.android.server.am.DataConnectionStats: void startMonitoring()>",
+                    "RegisteredStmt": "virtualinvoke $r3_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>(r0, $r6, null, $r1)"
+                },
+                "com.android.server.usage.StorageStatsService$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.usage.StorageStatsService$2",
+                    "RegisteredMethod": "<com.android.server.usage.StorageStatsService: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r4.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r17, $r16)"
+                },
+                "com.android.server.job.controllers.idle.CarIdlenessTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.job.controllers.idle.CarIdlenessTracker",
+                    "RegisteredMethod": "<com.android.server.job.controllers.idle.CarIdlenessTracker: void startTracking(android.content.Context,com.android.server.job.controllers.idle.IdlenessListener)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>(r0, $r4, null, $r2)"
+                },
+                "com.android.server.accessibility.magnification.FullScreenMagnificationGestureHandler$ScreenStateReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.accessibility.magnification.FullScreenMagnificationGestureHandler$ScreenStateReceiver",
+                    "RegisteredMethod": "<com.android.server.accessibility.magnification.FullScreenMagnificationGestureHandler$ScreenStateReceiver: void register()>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r2)"
+                },
+                "com.android.server.dreams.DreamManagerService$4": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.dreams.DreamManagerService$4",
+                    "RegisteredMethod": "<com.android.server.dreams.DreamManagerService: void onBootPhase(int)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r13, $r14, null, $r3)"
+                },
+                "com.android.server.tare.PowerSaveModeModifier$PowerSaveModeTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.tare.PowerSaveModeModifier$PowerSaveModeTracker",
+                    "RegisteredMethod": "<com.android.server.tare.PowerSaveModeModifier$PowerSaveModeTracker: void startTracking(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r2)"
+                },
+                "com.android.server.power.PowerManagerService$UserSwitchedReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.power.PowerManagerService$UserSwitchedReceiver",
+                    "RegisteredMethod": "<com.android.server.power.PowerManagerService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r10_8.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r47, $r44_2, null, $r11_6)"
+                },
+                "com.android.server.display.WifiDisplayController$21": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.display.WifiDisplayController$21",
+                    "RegisteredMethod": "<com.android.server.display.WifiDisplayController: void <init>(android.content.Context,android.os.Handler,com.android.server.display.WifiDisplayController$Listener)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r8, $r9, null, $r2)"
+                },
+                "com.android.server.power.stats.BatteryStatsImpl$3": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.power.stats.BatteryStatsImpl$3",
+                    "RegisteredMethod": "<com.android.server.power.stats.BatteryStatsImpl: void registerUsbStateReceiver(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r3, $r2)"
+                },
+                "com.android.server.connectivity.MultipathPolicyTracker$ConfigChangeReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.connectivity.MultipathPolicyTracker$ConfigChangeReceiver",
+                    "RegisteredMethod": "<com.android.server.connectivity.MultipathPolicyTracker: void start()>",
+                    "RegisteredStmt": "virtualinvoke $r1_3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r10, $r9, null, r11)"
+                },
+                "com.android.server.job.JobSchedulerService$5": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.job.JobSchedulerService$5",
+                    "RegisteredMethod": "<com.android.server.job.JobSchedulerService: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r29, $r59)"
+                },
+                "com.android.server.hdmi.HdmiControlService$HdmiControlBroadcastReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.hdmi.HdmiControlService$HdmiControlBroadcastReceiver",
+                    "RegisteredMethod": "<com.android.server.hdmi.HdmiControlService: void onStart()>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r0, $r6)"
+                },
+                "com.android.server.job.controllers.idle.DeviceIdlenessTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.job.controllers.idle.DeviceIdlenessTracker",
+                    "RegisteredMethod": "<com.android.server.job.controllers.idle.DeviceIdlenessTracker: void startTracking(android.content.Context,com.android.server.job.controllers.idle.IdlenessListener)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>(r0, $r11, null, $r7)"
+                },
+                "com.android.server.accessibility.FlashNotificationsController$FlashBroadcastReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.accessibility.FlashNotificationsController$FlashBroadcastReceiver",
+                    "RegisteredMethod": "<com.android.server.accessibility.FlashNotificationsController: void <init>(android.content.Context,android.os.Handler,android.os.Handler)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>($r13, $r12, 4)"
+                },
+                "com.android.server.policy.SideFpsEventHandler$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.policy.SideFpsEventHandler$1",
+                    "RegisteredMethod": "<com.android.server.policy.SideFpsEventHandler: void <init>(android.content.Context,android.os.Handler,android.os.PowerManager,com.android.server.policy.SideFpsEventHandler$DialogProvider)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r7, $r8)"
+                },
+                "com.android.server.vibrator.VibrationSettings$SettingsBroadcastReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.vibrator.VibrationSettings$SettingsBroadcastReceiver",
+                    "RegisteredMethod": "<com.android.server.vibrator.VibrationSettings: void registerSettingsChangeReceiver(android.content.IntentFilter)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>(r3, $r0, 2)"
+                },
+                "com.android.server.power.PowerManagerService$DreamReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.power.PowerManagerService$DreamReceiver",
+                    "RegisteredMethod": "<com.android.server.power.PowerManagerService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r10_7.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r46, $r44_1, null, $r11_5)"
+                },
+                "com.android.server.backup.BackupManagerService$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.backup.BackupManagerService$1",
+                    "RegisteredMethod": "<com.android.server.backup.BackupManagerService: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r11, $r15)"
+                },
+                "com.android.server.accessibility.magnification.FullScreenMagnificationController$ScreenStateObserver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.accessibility.magnification.FullScreenMagnificationController$ScreenStateObserver",
+                    "RegisteredMethod": "<com.android.server.accessibility.magnification.FullScreenMagnificationController$ScreenStateObserver: void registerIfNecessary()>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r1)"
+                },
+                "com.android.server.input.InputManagerService$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.input.InputManagerService$2",
+                    "RegisteredMethod": "<com.android.server.input.InputManagerService: void systemRunning()>",
+                    "RegisteredStmt": "virtualinvoke $r7.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r18, $r17, null, $r8)"
+                },
+                "com.android.server.BinaryTransparencyService$PackageUpdatedReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.BinaryTransparencyService$PackageUpdatedReceiver",
+                    "RegisteredMethod": "<com.android.server.BinaryTransparencyService: void registerApkAndNonStagedApexUpdateListener()>",
+                    "RegisteredStmt": "virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r1, $r2)"
+                },
+                "com.android.server.sensorprivacy.SensorPrivacyService$SensorPrivacyServiceImpl$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.sensorprivacy.SensorPrivacyService$SensorPrivacyServiceImpl$1",
+                    "RegisteredMethod": "<com.android.server.sensorprivacy.SensorPrivacyService$SensorPrivacyServiceImpl: void <init>(com.android.server.sensorprivacy.SensorPrivacyService)>",
+                    "RegisteredStmt": "virtualinvoke $r4_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)>($r13, $r14, \"android.permission.MANAGE_SENSOR_PRIVACY\", null, 2)"
+                },
+                "com.android.server.sensorprivacy.SensorPrivacyService$SensorPrivacyServiceImpl$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.sensorprivacy.SensorPrivacyService$SensorPrivacyServiceImpl$2",
+                    "RegisteredMethod": "<com.android.server.sensorprivacy.SensorPrivacyService$SensorPrivacyServiceImpl: void <init>(com.android.server.sensorprivacy.SensorPrivacyService)>",
+                    "RegisteredStmt": "virtualinvoke $r4_2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r15, $r14_1)"
+                },
+                "com.android.server.power.ShutdownThread$CloseDialogReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.power.ShutdownThread$CloseDialogReceiver",
+                    "RegisteredMethod": "<com.android.server.power.ShutdownThread$CloseDialogReceiver: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>(r0, $r2, 2)"
+                },
+                "com.android.server.pm.StagingManager$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.pm.StagingManager$2",
+                    "RegisteredMethod": "<com.android.server.pm.StagingManager: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r3_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r4, $r0)"
+                },
+                "com.android.server.soundtrigger.SoundTriggerService$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.soundtrigger.SoundTriggerService$1",
+                    "RegisteredMethod": "<com.android.server.soundtrigger.SoundTriggerService: void onBootPhase(int)>",
+                    "RegisteredStmt": "virtualinvoke $r4_4.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r9, $r10)"
+                },
+                "com.android.server.app.GameManagerService$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.app.GameManagerService$2",
+                    "RegisteredMethod": "<com.android.server.app.GameManagerService: void onBootCompleted()>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r3, r4)"
+                },
+                "com.android.server.accounts.AccountManagerService$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.accounts.AccountManagerService$1",
+                    "RegisteredMethod": "<com.android.server.accounts.AccountManagerService: void <init>(com.android.server.accounts.AccountManagerService$Injector)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r17, $r16)"
+                },
+                "com.android.server.autofill.AutofillManagerService$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.autofill.AutofillManagerService$1",
+                    "RegisteredMethod": "<com.android.server.autofill.AutofillManagerService: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)>($r19, $r24, null, $r9, 2)"
+                },
+                "com.android.server.input.KeyboardLayoutManager$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.input.KeyboardLayoutManager$1",
+                    "RegisteredMethod": "<com.android.server.input.KeyboardLayoutManager: void systemRunning()>",
+                    "RegisteredStmt": "virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r4, $r2, null, $r0)"
+                },
+                "com.android.server.notification.CountdownConditionProvider$Receiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.notification.CountdownConditionProvider$Receiver",
+                    "RegisteredMethod": "<com.android.server.notification.CountdownConditionProvider: void onConnected()>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>($r3, $r1, 2)"
+                },
+                "com.android.server.usage.AppStandbyController$DeviceStateReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.usage.AppStandbyController$DeviceStateReceiver",
+                    "RegisteredMethod": "<com.android.server.usage.AppStandbyController: void <init>(com.android.server.usage.AppStandbyController$Injector)>",
+                    "RegisteredStmt": "virtualinvoke $r6.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r23, $r24)"
+                },
+                "com.android.server.pm.BackgroundDexOptService$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.pm.BackgroundDexOptService$1",
+                    "RegisteredMethod": "<com.android.server.pm.BackgroundDexOptService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r0, r4)"
+                },
+                "com.android.server.inputmethod.OverlayableSystemBooleanResourceWrapper$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.inputmethod.OverlayableSystemBooleanResourceWrapper$1",
+                    "RegisteredMethod": "<com.android.server.inputmethod.OverlayableSystemBooleanResourceWrapper: com.android.server.inputmethod.OverlayableSystemBooleanResourceWrapper create(android.content.Context,int,android.os.Handler,java.util.function.Consumer)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)>($r7, $r6, null, $r1, 4)"
+                },
+                "com.android.server.content.SyncManager$4": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.content.SyncManager$4",
+                    "RegisteredMethod": "<com.android.server.content.SyncManager: void <init>(android.content.Context,boolean)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r12, $r6_3)"
+                },
+                "com.android.server.job.controllers.BatteryController$PowerTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.job.controllers.BatteryController$PowerTracker",
+                    "RegisteredMethod": "<com.android.server.job.controllers.BatteryController$PowerTracker: void startTracking()>",
+                    "RegisteredStmt": "virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r1)"
+                },
+                "com.android.server.accessibility.PolicyWarningUIController$NotificationController": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.accessibility.PolicyWarningUIController$NotificationController",
+                    "RegisteredMethod": "<com.android.server.accessibility.PolicyWarningUIController: void <init>(android.os.Handler,android.content.Context,com.android.server.accessibility.PolicyWarningUIController$NotificationController)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)>($r2, $r3, \"android.permission.MANAGE_ACCESSIBILITY\", $r0, 2)"
+                },
+                "com.android.server.notification.NotificationComparator$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.notification.NotificationComparator$1",
+                    "RegisteredMethod": "<com.android.server.notification.NotificationComparator: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r3, $r1)"
+                },
+                "com.android.server.alarm.AlarmManagerService$ClockReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.alarm.AlarmManagerService$ClockReceiver",
+                    "RegisteredMethod": "<com.android.server.alarm.AlarmManagerService$ClockReceiver: void <init>(com.android.server.alarm.AlarmManagerService)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r1)"
+                },
+                "com.android.server.pm.PackageManagerService$5": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.pm.PackageManagerService$5",
+                    "RegisteredMethod": "<com.android.server.pm.PackageManagerService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r1_6.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r37, $r38)"
+                },
+                "com.android.server.pm.PackageManagerService$6": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.pm.PackageManagerService$6",
+                    "RegisteredMethod": "<com.android.server.pm.PackageManagerService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r1_8.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r39, $r38_2)"
+                },
+                "com.android.server.timedetector.NetworkTimeUpdateService$ScheduledRefreshBroadcastReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.timedetector.NetworkTimeUpdateService$ScheduledRefreshBroadcastReceiver",
+                    "RegisteredMethod": "<com.android.server.timedetector.NetworkTimeUpdateService: void systemRunning()>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r1, $r3)"
+                },
+                "com.android.server.location.contexthub.ContextHubService$3": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.location.contexthub.ContextHubService$3",
+                    "RegisteredMethod": "<com.android.server.location.contexthub.ContextHubService: void initWifiSettingNotifications()>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r5, $r6)"
+                },
+                "com.android.server.notification.SnoozeHelper$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.notification.SnoozeHelper$1",
+                    "RegisteredMethod": "<com.android.server.notification.SnoozeHelper: void <init>(android.content.Context,com.android.server.notification.SnoozeHelper$Callback,com.android.server.notification.ManagedServices$UserProfiles)>",
+                    "RegisteredStmt": "virtualinvoke $r5.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>($r7, $r3, 2)"
+                },
+                "com.android.server.location.injector.SystemEmergencyHelper$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.location.injector.SystemEmergencyHelper$1",
+                    "RegisteredMethod": "<com.android.server.location.injector.SystemEmergencyHelper: void onSystemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r2_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r6, $r7)"
+                },
+                "com.android.server.integrity.AppIntegrityManagerServiceImpl$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.integrity.AppIntegrityManagerServiceImpl$1",
+                    "RegisteredMethod": "<com.android.server.integrity.AppIntegrityManagerServiceImpl: void <init>(android.content.Context,android.content.pm.PackageManagerInternal,java.util.function.Supplier,com.android.server.integrity.engine.RuleEvaluationEngine,com.android.server.integrity.IntegrityFileManager,android.os.Handler)>",
+                    "RegisteredStmt": "virtualinvoke $r4.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r8, $r7, null, $r2)"
+                },
+                "com.android.server.location.contexthub.ContextHubService$6": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.location.contexthub.ContextHubService$6",
+                    "RegisteredMethod": "<com.android.server.location.contexthub.ContextHubService: void initBtSettingNotifications()>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r5, $r6)"
+                },
+                "com.android.server.policy.DeviceStateProviderImpl$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.policy.DeviceStateProviderImpl$1",
+                    "RegisteredMethod": "<com.android.server.policy.DeviceStateProviderImpl: void <init>(android.content.Context,java.util.List,java.util.List)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r14, $r13)"
+                },
+                "com.android.server.vr.VrManagerService$5": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.vr.VrManagerService$5",
+                    "RegisteredMethod": "<com.android.server.vr.VrManagerService: void onBootPhase(int)>",
+                    "RegisteredStmt": "virtualinvoke $r9_3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r20, $r19)"
+                },
+                "com.android.server.people.data.ConversationStatusExpirationBroadcastReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.people.data.ConversationStatusExpirationBroadcastReceiver",
+                    "RegisteredMethod": "<com.android.server.people.data.DataManager: void initialize()>",
+                    "RegisteredStmt": "virtualinvoke $r5_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>($r8, $r9, 4)"
+                },
+                "com.android.server.tare.DeviceIdleModifier$DeviceIdleTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.tare.DeviceIdleModifier$DeviceIdleTracker",
+                    "RegisteredMethod": "<com.android.server.tare.DeviceIdleModifier$DeviceIdleTracker: void startTracking(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r2)"
+                },
+                "com.android.server.pm.DexOptHelper$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.pm.DexOptHelper$1",
+                    "RegisteredMethod": "<com.android.server.pm.DexOptHelper: void initializeArtManagerLocal(android.content.Context,com.android.server.pm.PackageManagerService)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r6, $r7)"
+                },
+                "com.android.server.inputmethod.InputMethodManagerService$ImmsBroadcastReceiverForSystemUser": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.inputmethod.InputMethodManagerService$ImmsBroadcastReceiverForSystemUser",
+                    "RegisteredMethod": "<com.android.server.inputmethod.InputMethodManagerService: void systemRunning()>",
+                    "RegisteredStmt": "virtualinvoke $r0_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r18, $r3)"
+                },
+                "com.android.server.rollback.RollbackManagerServiceImpl$3": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.rollback.RollbackManagerServiceImpl$3",
+                    "RegisteredMethod": "<com.android.server.rollback.RollbackManagerServiceImpl: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1_3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r32, $r29_2, null, $r5_5)"
+                },
+                "com.android.server.rollback.RollbackManagerServiceImpl$4": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.rollback.RollbackManagerServiceImpl$4",
+                    "RegisteredMethod": "<com.android.server.rollback.RollbackManagerServiceImpl: void registerUserCallbacks(android.os.UserHandle)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r10, $r9, null, $r8_1)"
+                },
+                "com.android.server.rollback.RollbackManagerServiceImpl$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.rollback.RollbackManagerServiceImpl$1",
+                    "RegisteredMethod": "<com.android.server.rollback.RollbackManagerServiceImpl: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r30, $r13, null, $r5_3)"
+                },
+                "com.android.server.rollback.RollbackManagerServiceImpl$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.rollback.RollbackManagerServiceImpl$2",
+                    "RegisteredMethod": "<com.android.server.rollback.RollbackManagerServiceImpl: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1_2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r31, $r29_1, null, $r5_4)"
+                },
+                "com.android.server.vcn.TelephonySubscriptionTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.vcn.TelephonySubscriptionTracker",
+                    "RegisteredMethod": "<com.android.server.vcn.TelephonySubscriptionTracker: void register()>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>(r0, $r10, null, $r1_1)"
+                },
+                "com.android.server.rollback.RollbackManagerServiceImpl$5": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.rollback.RollbackManagerServiceImpl$5",
+                    "RegisteredMethod": "<com.android.server.rollback.RollbackManagerServiceImpl: void registerTimeChangeReceiver()>",
+                    "RegisteredStmt": "virtualinvoke $r4.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r0, $r1, null, $r2)"
+                },
+                "com.android.server.devicestate.DeviceStateNotificationController": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.devicestate.DeviceStateNotificationController",
+                    "RegisteredMethod": "<com.android.server.devicestate.DeviceStateNotificationController: void <init>(android.content.Context,android.os.Handler,java.lang.Runnable,com.android.server.devicestate.DeviceStateNotificationController$NotificationInfoProvider,android.content.pm.PackageManager,android.app.NotificationManager)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)>(r0, $r6, \"android.permission.CONTROL_DEVICE_STATE\", $r2, 4)"
+                },
+                "com.android.server.am.ActivityManagerService$8": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.am.ActivityManagerService$8",
+                    "RegisteredMethod": "<com.android.server.am.ActivityManagerService: void finishBooting()>",
+                    "RegisteredStmt": "virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r23, $r22)"
+                },
+                "com.android.server.input.InputSettingsObserver$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.input.InputSettingsObserver$1",
+                    "RegisteredMethod": "<com.android.server.input.InputSettingsObserver: void registerAndUpdate()>",
+                    "RegisteredStmt": "virtualinvoke $r6_2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r11, $r12, null, $r8)"
+                },
+                "com.android.server.trust.TrustAgentWrapper$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.trust.TrustAgentWrapper$1",
+                    "RegisteredMethod": "<com.android.server.trust.TrustAgentWrapper: void <init>(android.content.Context,com.android.server.trust.TrustManagerService,android.content.Intent,android.os.UserHandle)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r12, $r18)"
+                },
+                "com.android.server.trust.TrustAgentWrapper$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.trust.TrustAgentWrapper$2",
+                    "RegisteredMethod": "<com.android.server.trust.TrustAgentWrapper: void <init>(android.content.Context,com.android.server.trust.TrustManagerService,android.content.Intent,android.os.UserHandle)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)>($r13, $r11, \"android.permission.PROVIDE_TRUST_AGENT\", null, 2)"
+                },
+                "com.android.server.attention.AttentionManagerService$ScreenStateReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.attention.AttentionManagerService$ScreenStateReceiver",
+                    "RegisteredMethod": "<com.android.server.attention.AttentionManagerService: void onBootPhase(int)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r2, $r3)"
+                },
+                "com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl$1",
+                    "RegisteredMethod": "<com.android.server.voiceinteraction.VoiceInteractionManagerServiceImpl: void <init>(android.content.Context,android.os.Handler,com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub,int,android.content.ComponentName)>",
+                    "RegisteredStmt": "virtualinvoke $r2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)>($r0, $r21, null, $r3, 2)"
+                },
+                "com.android.server.location.injector.SystemDeviceIdleHelper$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.location.injector.SystemDeviceIdleHelper$1",
+                    "RegisteredMethod": "<com.android.server.location.injector.SystemDeviceIdleHelper: void onRegistrationStateChanged()>",
+                    "RegisteredStmt": "virtualinvoke $r4.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r3, $r0, null, $r5)"
+                },
+                "com.android.server.am.ProcessList$ImperceptibleKillRunner$IdlenessReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.am.ProcessList$ImperceptibleKillRunner$IdlenessReceiver",
+                    "RegisteredMethod": "<com.android.server.am.ProcessList$ImperceptibleKillRunner: boolean enqueueLocked(com.android.server.am.ProcessRecord,java.lang.String,int)>",
+                    "RegisteredStmt": "virtualinvoke $r11.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r8_1, $r15)"
+                },
+                "com.android.server.usb.MtpNotificationManager$Receiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.usb.MtpNotificationManager$Receiver",
+                    "RegisteredMethod": "<com.android.server.usb.MtpNotificationManager: void <init>(android.content.Context,com.android.server.usb.MtpNotificationManager$OnOpenInAppListener)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r3, r4)"
+                },
+                "com.android.server.power.PowerManagerService$DockReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.power.PowerManagerService$DockReceiver",
+                    "RegisteredMethod": "<com.android.server.power.PowerManagerService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r10_9.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r48, $r44_3, null, $r11_7)"
+                },
+                "com.android.server.signedconfig.SignedConfigService$UpdateReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.signedconfig.SignedConfigService$UpdateReceiver",
+                    "RegisteredMethod": "<com.android.server.signedconfig.SignedConfigService: void registerUpdateReceiver(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r2, $r1)"
+                },
+                "com.android.server.notification.EventConditionProvider$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.notification.EventConditionProvider$1",
+                    "RegisteredMethod": "<com.android.server.notification.EventConditionProvider: void onBootComplete()>",
+                    "RegisteredStmt": "virtualinvoke $r3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r1, $r2)"
+                },
+                "com.android.server.accessibility.AccessibilityManagerService$5": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.accessibility.AccessibilityManagerService$5",
+                    "RegisteredMethod": "<com.android.server.accessibility.AccessibilityManagerService: void registerBroadcastReceivers()>",
+                    "RegisteredStmt": "virtualinvoke $r1_3.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>($r11, $r0_2, 4)"
+                },
+                "com.android.server.tare.ChargingModifier$ChargingTracker": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.tare.ChargingModifier$ChargingTracker",
+                    "RegisteredMethod": "<com.android.server.tare.ChargingModifier$ChargingTracker: void startTracking(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r0, $r2)"
+                },
+                "com.android.server.people.data.DataManager$ShutdownBroadcastReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.people.data.DataManager$ShutdownBroadcastReceiver",
+                    "RegisteredMethod": "<com.android.server.people.data.DataManager: void initialize()>",
+                    "RegisteredStmt": "virtualinvoke $r5_2.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r10, $r9_1)"
+                },
+                "com.android.server.VcnManagementService$VcnBroadcastReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.VcnManagementService$VcnBroadcastReceiver",
+                    "RegisteredMethod": "<com.android.server.VcnManagementService: void <init>(android.content.Context,com.android.server.VcnManagementService$Dependencies)>",
+                    "RegisteredStmt": "virtualinvoke $r1_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r14, $r15, null, $r11)"
+                },
+                "com.android.server.Watchdog$RebootRequestReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.Watchdog$RebootRequestReceiver",
+                    "RegisteredMethod": "<com.android.server.Watchdog: void init(android.content.Context,com.android.server.am.ActivityManagerService)>",
+                    "RegisteredStmt": "virtualinvoke $r0.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r3, r4, \"android.permission.REBOOT\", null)"
+                },
+                "com.android.server.usb.UsbDeviceManager$3": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.usb.UsbDeviceManager$3",
+                    "RegisteredMethod": "<com.android.server.usb.UsbDeviceManager: void <init>(android.content.Context,com.android.server.usb.UsbAlsaManager,com.android.server.usb.UsbSettingsManager,com.android.server.usb.UsbPermissionManager)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r21, $r23_2)"
+                },
+                "com.android.server.usb.UsbDeviceManager$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.usb.UsbDeviceManager$2",
+                    "RegisteredMethod": "<com.android.server.usb.UsbDeviceManager: void <init>(android.content.Context,com.android.server.usb.UsbAlsaManager,com.android.server.usb.UsbSettingsManager,com.android.server.usb.UsbPermissionManager)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r20, $r23_1)"
+                },
+                "com.android.server.usb.UsbDeviceManager$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.usb.UsbDeviceManager$1",
+                    "RegisteredMethod": "<com.android.server.usb.UsbDeviceManager: void <init>(android.content.Context,com.android.server.usb.UsbAlsaManager,com.android.server.usb.UsbSettingsManager,com.android.server.usb.UsbPermissionManager)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r19, $r23)"
+                },
+                "com.android.server.power.PowerManagerService$BatteryReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.power.PowerManagerService$BatteryReceiver",
+                    "RegisteredMethod": "<com.android.server.power.PowerManagerService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r10_6.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r45, $r44, null, $r11_4)"
+                },
+                "com.android.server.profcollect.ProfcollectForwardingService$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.profcollect.ProfcollectForwardingService$2",
+                    "RegisteredMethod": "<com.android.server.profcollect.ProfcollectForwardingService: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>($r6, r9, 4)"
+                },
+                "com.android.server.powerstats.BatteryTrigger$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.powerstats.BatteryTrigger$1",
+                    "RegisteredMethod": "<com.android.server.powerstats.BatteryTrigger: void <init>(android.content.Context,com.android.server.powerstats.PowerStatsLogger,boolean)>",
+                    "RegisteredStmt": "$r5 = virtualinvoke $r1_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r3, $r4)"
+                },
+                "com.android.server.PinnerService$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.PinnerService$1",
+                    "RegisteredMethod": "<com.android.server.PinnerService: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r4, $r15)"
+                },
+                "com.android.server.usb.UsbDeviceManager$4": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.usb.UsbDeviceManager$4",
+                    "RegisteredMethod": "<com.android.server.usb.UsbDeviceManager: void <init>(android.content.Context,com.android.server.usb.UsbAlsaManager,com.android.server.usb.UsbSettingsManager,com.android.server.usb.UsbPermissionManager)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r22, $r23_3)"
+                },
+                "com.android.server.media.MediaRouter2ServiceImpl$1": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.media.MediaRouter2ServiceImpl$1",
+                    "RegisteredMethod": "<com.android.server.media.MediaRouter2ServiceImpl: void <init>(android.content.Context)>",
+                    "RegisteredStmt": "virtualinvoke $r1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r14, $r15)"
+                },
+                "com.android.server.notification.ReviewNotificationPermissionsReceiver": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.notification.ReviewNotificationPermissionsReceiver",
+                    "RegisteredMethod": "<com.android.server.notification.NotificationManagerService: void init(com.android.server.notification.NotificationManagerService$WorkerHandler,com.android.server.notification.RankingHandler,android.content.pm.IPackageManager,android.content.pm.PackageManager,com.android.server.lights.LightsManager,com.android.server.notification.NotificationManagerService$NotificationListeners,com.android.server.notification.NotificationManagerService$NotificationAssistants,com.android.server.notification.ConditionProviders,android.companion.ICompanionDeviceManager,com.android.server.notification.SnoozeHelper,com.android.server.notification.NotificationUsageStats,android.util.AtomicFile,android.app.ActivityManager,com.android.server.notification.GroupHelper,android.app.IActivityManager,com.android.server.wm.ActivityTaskManagerInternal,android.app.usage.UsageStatsManagerInternal,android.app.admin.DevicePolicyManagerInternal,android.app.IUriGrantsManager,com.android.server.uri.UriGrantsManagerInternal,android.app.AppOpsManager,android.os.UserManager,com.android.server.notification.NotificationHistoryManager,android.app.StatsManager,android.telephony.TelephonyManager,android.app.ActivityManagerInternal,com.android.server.utils.quota.MultiRateLimiter,com.android.server.notification.PermissionHelper,android.app.usage.UsageStatsManagerInternal,android.telecom.TelecomManager,com.android.server.notification.NotificationChannelLogger,com.android.internal.config.sysui.SystemUiSystemPropertiesFlags$FlagResolver,android.permission.PermissionManager,android.os.PowerManager,com.android.server.notification.NotificationManagerService$PostNotificationTrackerFactory)>",
+                    "RegisteredStmt": "virtualinvoke $r39_23.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)>($r79_1, $r76_7, 4)"
+                },
+                "com.android.server.wallpaper.WallpaperManagerService$3": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.wallpaper.WallpaperManagerService$3",
+                    "RegisteredMethod": "<com.android.server.wallpaper.WallpaperManagerService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r7_1.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r12, $r10_1)"
+                },
+                "com.android.server.wallpaper.WallpaperManagerService$2": {
+                    "exported": true,
+                    "DynamicBroadcastReceiver": "com.android.server.wallpaper.WallpaperManagerService$2",
+                    "RegisteredMethod": "<com.android.server.wallpaper.WallpaperManagerService: void systemReady()>",
+                    "RegisteredStmt": "virtualinvoke $r7.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r11, $r10)"
+                }
+            }
+        },
+        "JSNativeInterface": [
+        ]
+    },
+    "UsePermissions": [
+    ],
+    "DefinePermissions": {
+    },
+    "Profile": "/home/caosheng/ParcelTaint/appshark/out/ParcelMismatchInSystemServer/vulnerability/24-profiler.json"
+}

@@ -1,0 +1,30 @@
+{
+  "ParcelMismatchInSystemServer": {
+    "enable": true,
+    "DirectMode": true,
+    "traceDepth": 16,
+    "PreciseTaint": false,
+    "desc": {
+      "name": "ParcelMismatch",
+      "category": "ParcelMismatch",
+      "detail": "ParcelMismatch in System Server",
+      "wiki": "",
+      "possibility": "2",
+      "model": "high"
+    },
+    "entry": {
+      "methods": []
+    },
+    "source": {
+      "Param": {}
+    },
+    "sink": {},
+    "mustTainted": {
+      "<android.os.Bundle: void remove(java.lang.String)>": {
+        "TaintCheck": [
+          "@this"
+        ]
+      }
+    }
+  }
+}

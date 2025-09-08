@@ -1,0 +1,29 @@
+{
+  //apk to anlayze
+    "apkPath": "../aosp14/services.apk",
+  //result output directory
+   "out": "out/ParcelMismatchInSystemServer/",
+
+  //specifies the rules, default is all *.json files in the $rulePath directory
+ //  "rules": "IntentRedirectionPlusVersion.json",
+  "rules": "ParcelMismatchInSystemServer.json",
+//"rules":"IntentRedirectionBabyVersion.json",  
+  "checkPermission": false,
+
+// "isSupportICC": true,
+
+  //specifies the rule's parent directory, default is ./config/rules
+  //  "rulePath": "config/rules",
+
+  //print more info about this rule
+   // "debugRule": "ParcelMismatchInSystemServer",
+
+  //output log level
+  //  "logLevel": 0,
+
+  //display the decompiled java code in the results
+  //  "javaSource": true,
+
+  "miniSdkForcing": 34,
+  "targetSdkForcing": 34,
+}
