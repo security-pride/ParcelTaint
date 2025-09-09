@@ -67,4 +67,16 @@ $ grep -r -l --include="*.html" "DeepLinkHomepageActivityInternal" ~/ParcelTaint
 $ grep -r -l --include="*.html" "AppRestrictionsFragment" ~/ParcelTaint/appshark/out/IntentRedirectionPlusVersion/vulnerability | wc -l
 1
 ```
-# ParcelTaint
+### Citation
+If you find this artifact or paper useful for your research, please cite our work:
+
+```bibtex
+@article{cao2025parcel,
+  title     = {Parcel Mismatch Demystified: Addressing a Decade-Old Security Challenge in Android},
+  author    = {Cao, Sheng and Zhou, Hao and Shi, Songzhou and Zhao, Yanjie and Wang, Haoyu},
+  journal   = {Proceedings of the 2025 on ACM SIGSAC Conference on Computer and Communications Security},
+  volume    = {1},
+  year      = {2025},
+  publisher = {ACM New York, NY, USA},
+  doi       = {10.1145/3719027.3765034}
+}
